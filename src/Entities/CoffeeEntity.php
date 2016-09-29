@@ -13,17 +13,6 @@ class CoffeeEntity
     public $image;
     public $review;
 
-    /**
-     * CoffeeEntity constructor.
-     * @param $id
-     * @param $name
-     * @param $type
-     * @param $price
-     * @param $roast
-     * @param $country
-     * @param $image
-     * @param $review
-     */
     public function __construct($id, $name, $type, $price, $roast, $country, $image, $review)
     {
         $this->id = $id;
@@ -35,7 +24,5 @@ class CoffeeEntity
         $this->image = $image;
         $this->review = $review;
     }
-
-
 }
 

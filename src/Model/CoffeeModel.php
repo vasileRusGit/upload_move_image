@@ -14,8 +14,8 @@ class CoffeeModel
         //Login data for the database. Use this file in all Models
         $host = "localhost";
         $user = "root";
-        $pass = "blade";
-        $database = "CoffeeDB";
+        $pass = "";
+        $database = "mytodo";
 
         //Open connection and Select database.
         $databaseConnection = mysqli_connect($host, $user, $pass, $database) or die(mysqli_error());
@@ -40,8 +40,8 @@ class CoffeeModel
         //Login data for the database. Use this file in all Models
         $host = "localhost";
         $user = "root";
-        $pass = "blade";
-        $database = "CoffeeDB";
+        $pass = "";
+        $database = "mytodo";
 
         //Open connection and Select database.
         $databaseConnection = mysqli_connect($host, $user, $pass, $database) or die(mysqli_error());
@@ -75,8 +75,8 @@ class CoffeeModel
         //Login data for the database. Use this file in all Models
         $host = "localhost";
         $user = "root";
-        $pass = "blade";
-        $database = "CoffeeDB";
+        $pass = "";
+        $database = "mytodo";
 
         //Open connection and Select database.
         $databaseConnection = mysqli_connect($host, $user, $pass, $database) or die(mysqli_error);
@@ -107,20 +107,20 @@ class CoffeeModel
         //Login data for the database. Use this file in all Models
         $host = "localhost";
         $user = "root";
-        $pass = "blade";
-        $database = "CoffeeDB";
+        $pass = "";
+        $database = "mytodo";
 
         //Open connection and Select database.
         $databaseConnection = mysqli_connect($host, $user, $pass, $database) or die(mysqli_error());
 
-        $query = sprintf("INSERT INTO coffee (name, type, price, roast, country, image, review) VALUES, 
-                                             ('%s', '%s' . '%s'  .'%s'  . '%s'   .'%s'  .'%s')",
+        $query = sprintf("INSERT INTO coffee (name, type, price, roast, country, image, review) VALUES
+                                             ('%s', '%s' , '%s'  ,'%s'  , '%s'   ,'%s'  ,'%s')",
             mysqli_real_escape_string($databaseConnection, $coffee->name),
             mysqli_real_escape_string($databaseConnection, $coffee->type),
             mysqli_real_escape_string($databaseConnection, $coffee->price),
             mysqli_real_escape_string($databaseConnection, $coffee->roast),
             mysqli_real_escape_string($databaseConnection, $coffee->country),
-            mysqli_real_escape_string($databaseConnection, "Images / Coffee / " . $coffee->image),
+            mysqli_real_escape_string($databaseConnection, "Images/Coffee/" . $coffee->image),
             mysqli_real_escape_string($databaseConnection, $coffee->review));
 
         //execute query and close connection
@@ -133,8 +133,8 @@ class CoffeeModel
         //Login data for the database. Use this file in all Models
         $host = "localhost";
         $user = "root";
-        $pass = "blade";
-        $database = "CoffeeDB";
+        $pass = "";
+        $database = "mytodo";
 
         //Open connection and Select database.
         $databaseConnection = mysqli_connect($host, $user, $pass, $database) or die(mysqli_error());
@@ -144,13 +144,13 @@ class CoffeeModel
         mysqli_close($databaseConnection);
     }
 
-    public function updateCoffee($id, CoffeeEntity $coffee)
+    public function updateCoffee($id, \CoffeeEntity $coffee)
     {
         //Login data for the database. Use this file in all Models
         $host = "localhost";
         $user = "root";
-        $pass = "blade";
-        $database = "CoffeeDB";
+        $pass = "";
+        $database = "mytodo";
 
         //Open connection and Select database.
         $databaseConnection = mysqli_connect($host, $user, $pass, $database) or die(mysqli_error());

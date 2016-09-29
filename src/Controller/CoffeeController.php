@@ -5,7 +5,6 @@ namespace Acme\Controller;
 use Acme\Entities\CoffeeEntity;
 use Acme\Model\CoffeeModel;
 
-ini_set('display_errors', 'On');
 class CoffeeController
 {
 
@@ -73,7 +72,7 @@ class CoffeeController
                         
                         <tr>
                             <td colspan='2' >$coffee->review</td>
-                        </tr>                      
+                        </tr>
                      </table>";
         }
         return $result;

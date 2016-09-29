@@ -7,7 +7,7 @@ use Acme\Controller\CoffeeController;
 $coffeeController = new CoffeeController();
 
 $title = "Add new Coffee";
-$content = "<form action='Management.php' class='form-inline' method='post'>
+$content = "<form action='' class='form-inline' method='post'>
                 <fieldset>
                     <legend>Add a new Coffee</legend>
                     
