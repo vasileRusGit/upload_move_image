@@ -5,10 +5,11 @@
         <title><?php echo $title; ?></title>
         <link rel="stylesheet" type="text/css" href="Styles/Stylesheet.css" />
         <link rel="stylesheet" type="text/css" href="Styles/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="Styles/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="Styles/sweetalert.css" />
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-3.js"></script>
-        <script src="js/js.js"></script>
+        <script src="js/customjs.js"></script>
+        <script src="js/sweetalert.min.js"></script>
 
     </head>
     <body>

@@ -7,13 +7,13 @@ use Acme\Controller\CoffeeController;
 $coffeeController = new CoffeeController();
 
 $title = "Add new Coffee";
-$content = "<form action='' class='form-inline' method='post'>
+$content = "<form action='#' class='form-inline' method='post' id='submit-form'>
                 <fieldset>
                     <legend>Add a new Coffee</legend>
                     
                     <div class=\"row-fluid \">
                         <div class='span2'> <label for='name'>Name</label></div>
-                        <div class='span8'> <input  type='text' class='inputField' name='txtName' /><br /></div>
+                        <div class='span8'> <input  type='text' class='inputField' id='form-name' name='txtName' /><br /></div>
                     </div>
                     
                     <div class=\"row-fluid\">
@@ -40,7 +40,7 @@ $content = "<form action='' class='form-inline' method='post'>
                     
                     <div class=\"row-fluid\">
                         <div class='span2'> <label for='image'>Image</label></div>
-                        <div class='span8'><select class='inputField' name='ddlImage'>" . $coffeeController->getImages() . "</select><br /></div>
+                        <div class='span8'><select class='inputField' id='form-image' name='ddlImage'>" . $coffeeController->getImages() . "</select><br /></div>
                     </div>
                     
                     <div class=\"row-fluid\">
@@ -58,10 +58,6 @@ $content = "<form action='' class='form-inline' method='post'>
 
 if(isset($_POST["txtName"]) ){
     $coffeeController->insertCoffee();
+} else {
+    include "Template.php";
 }
-
-include "Template.php";
-
-ini_set('display_errors', 'On');
-//&& isset($_POST["ddlType"]) && isset($_POST["txtPrice"]) && isset($_POST["txtRoast"]) &&
-//isset($_POST["txtCountry"]) && isset($_POST["ddlImage"]) && isset($_POST["txtReview"])
