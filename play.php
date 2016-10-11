@@ -1,9 +1,4 @@
 <?php
-//$resorce = opendir('Images/Coffee/');
-//
-//while(($entry = readdir($resorce)) != false){
-//    echo $entry.'<br/>';
-//}
 
 $databaseConnection = new PDO('mysql:host=localhost;dbname=datatables_crud;charset=utf8', 'root', '');
 
