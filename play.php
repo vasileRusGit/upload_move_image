@@ -30,6 +30,6 @@ $databaseConnection = mysqli_connect("localhost", "root", "","datatables_crud");
 $sql = "SELECT * FROM image_upload";
 $result = mysqli_query($databaseConnection, $sql);
 while ($row = mysqli_fetch_array($result)) {
-    echo "<img src='" . $row['image'] . "'>";
+    echo "<img src='" . $row['image'] . "'>"; //'image' is the name from the database
 }
 ?>
